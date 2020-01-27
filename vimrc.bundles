@@ -1,7 +1,13 @@
-" Plugins here are part of the CORE Maximum Awesome setup
+"
+"Plugins here are part of the CORE Maximum Awesome setup
 " Do NOT add bundles to this list, as they might get removed when you upgrade
 " Maximum Awesome.
 " Please create ~/.vimrc.bundles.local and add any extra bundles you want there
+Plugin 'artur-shaik/vim-javacomplete2'
+Plugin 'junegunn/limelight.vim'
+Plugin 'junegunn/goyo.vim'
+Plugin 'ervandrew/supertab'
+Plugin 'mattn/emmet-vim'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
