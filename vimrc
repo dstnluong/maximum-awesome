@@ -24,12 +24,13 @@ filetype plugin indent on
 let g:syntastic_python_python_exec = '/usr/local/bin/python3.6'
 let g:syntastic_python_pylint_post_args="--max-line-length=120"
 
+set spelllang=en
 
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 let g:limelight_conceal_ctermfg = 240
 
-set foldmethod=indent   
+set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
@@ -87,6 +88,10 @@ nnoremap <leader><space> :call whitespace#strip_trailing()<CR>
 nnoremap <leader>g :GitGutterToggle<CR>
 noremap <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
+" skip by visual line
+map j gj
+map k gk
+
 " in case you forgot to sudo
 cnoremap w!! %!sudo tee > /dev/null %
 
@@ -118,6 +123,33 @@ autocmd User Rails silent! Rnavcommand mediator       app/mediators             
 autocmd User Rails silent! Rnavcommand stepdefinition features/step_definitions -glob=**/* -suffix=_steps.rb
 " automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
+
+" Latex stuff
+" Track the engine.
+let g:UltiSnipsSnippetsDir = '~/Desktop/maximum-awesome/vim/bundles/vim-snippets/'
+let g:UltiSnipsSnippetsDirectory=['tex']
+let g:UltiSnipsEditSplit="vertical"
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+setlocal conceallevel=2
+let g:tex_conceal='abdmg'
+hi conceal ctermfg=NONE ctermbg=NONE
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" setlocal spell
+autocmd FileType latex,tex,md,markdown setlocal spell
+set spelllang=en_us
+inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 
 " Fix Cursor in TMUX
 if exists('$TMUX')

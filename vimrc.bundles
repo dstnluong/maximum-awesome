@@ -3,6 +3,11 @@
 " Do NOT add bundles to this list, as they might get removed when you upgrade
 " Maximum Awesome.
 " Please create ~/.vimrc.bundles.local and add any extra bundles you want there
+Plugin 'kylelaker/riscv.vim'
+Plugin 'sirver/ultisnips'
+Plugin 'KeitaNakamura/tex-conceal.vim'
+Plugin 'lervag/vimtex'
+"Plugin 'ycm-core/YouCompleteMe'
 Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'junegunn/limelight.vim'
 Plugin 'junegunn/goyo.vim'
@@ -18,7 +23,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'rking/ag.vim'
+Plugin 'king/ag.vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
@@ -47,3 +52,4 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/Align'
 Plugin 'vim-scripts/greplace.vim'
 Plugin 'vim-scripts/matchit.zip'
+
